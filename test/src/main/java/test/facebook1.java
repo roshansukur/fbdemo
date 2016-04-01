@@ -14,7 +14,7 @@ public class facebook1 {
 
 	WebDriver driver = new FirefoxDriver();
 	WebElement firstname,lastname,mobile,remobile,password,bmonth,bday,byear,ButtonSubmit;
-	List<WebElement> radio;	
+	//List<WebElement> radio;	
 	@Before	
 	public void initializationpage() throws InterruptedException{
 					String Url = "http://www.facebook.com";
@@ -27,10 +27,9 @@ public class facebook1 {
 			bmonth = driver.findElement(By.id("month"));
 			bday = driver.findElement(By.id("day"));
 			byear = driver.findElement(By.id("year"));
-			radio = driver.findElements(By.className("_58mt"));
+			//radio = driver.findElements(By.className("_58mt"));
 			ButtonSubmit = driver.findElement(By.xpath(".//*[@id='u_0_j']"));	
-	
-		}
+			}
 		@Test
 		public void registration() throws InterruptedException
 		{
@@ -48,7 +47,7 @@ public class facebook1 {
 		bdaydrop.selectByIndex(8);
 		Select byeardrop = new Select(byear);
 		byeardrop.selectByIndex(12);
-		radio.get(0).click();
+		//radio.get(0).click();
 		ButtonSubmit.submit();		
 		
 	}
